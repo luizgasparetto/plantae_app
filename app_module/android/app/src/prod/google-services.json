@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "853200418624",
+    "project_id": "plantae-prod",
+    "storage_bucket": "plantae-prod.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:853200418624:android:6d87a4ceced8bc704aeca5",
+        "android_client_info": {
+          "package_name": "com.example.plantae.prod"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "853200418624-qfo4vu7702a0g7jn3r0ut4c0ipalnmrt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.plantae.prod",
+            "certificate_hash": "42bc93e7311ad138b49f8c6e8dfb26340e7214fa"
+          }
+        },
+        {
+          "client_id": "853200418624-0o3qs2mf7k0ko9p06lsmsv647f2thpa9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKAVY4uuyIJ0SpaeW4uwNQ885GhP6Z1no"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "853200418624-0o3qs2mf7k0ko9p06lsmsv647f2thpa9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
