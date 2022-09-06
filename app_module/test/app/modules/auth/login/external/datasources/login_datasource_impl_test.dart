@@ -25,7 +25,7 @@ void main() {
 
   group('Login Datasource | ', () {
     group('With Email | ', () {
-      test('should be able to Login With Email using AuthService', () async {
+      test('should be able to Login using AuthService', () async {
         when(() => authService.loginWithEmail(any())).thenAnswer((_) async {});
 
         await sut.loginWithEmail(kLoginWithEmailParams);
@@ -33,7 +33,7 @@ void main() {
         verify(() => authService.loginWithEmail(any())).called(1);
       });
 
-      test('should throw a AuthError when AuthService fails', () async {
+      test('should throw a AuthError when AuthService ', () async {
         when(() => authService.loginWithEmail(any())).thenThrow(AuthError(message: '', stackTrace: StackTrace.empty));
 
         expect(() => sut.loginWithEmail(kLoginWithEmailParams), throwsA(isA<AuthError>()));
