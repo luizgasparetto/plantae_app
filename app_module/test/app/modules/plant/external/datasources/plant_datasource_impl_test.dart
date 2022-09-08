@@ -18,6 +18,12 @@ void main() {
 
   const kCreatePlantParams = CreatePlantParams(name: 'plant_name', images: ['image_0']);
 
+  const kPlantMap = {
+    'id': 1,
+    'name': 'name',
+    'images': ['image_0']
+  };
+
   setUpAll(() {
     remoteDatabaseService = RemoteDatabaseServiceMock();
     authService = AuthServiceMock();
@@ -42,6 +48,26 @@ void main() {
         );
 
         expect(() => sut.createPlant(kCreatePlantParams), throwsA(isA<DatabaseError>()));
+      });
+    });
+
+    group('Get Plants | ', () {
+      test('should be able to get a List of PlantEntity successfully', () async {
+        when(() => authService.currentUserId).thenReturn("id");
+        when(() => remoteDatabaseService.getDocument(any(), any())).thenAnswer((_) async => [kPlantMap]);
+
+        final response = await sut.getPlants();
+
+        expect(response.first.name, equals('name'));
+      });
+
+      test('should throw a DatabaseError when fails to get the plants', () async {
+        when(() => authService.currentUserId).thenReturn("id");
+        when(() => remoteDatabaseService.getDocument(any(), any())).thenThrow(
+          DatabaseError(message: 'Error', stackTrace: StackTrace.empty),
+        );
+
+        expect(() => sut.getPlants(), throwsA(isA<DatabaseError>()));
       });
     });
   });

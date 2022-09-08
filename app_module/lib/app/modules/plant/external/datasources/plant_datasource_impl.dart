@@ -21,8 +21,9 @@ class PlantDatasourceImpl implements IPlantDatasource {
   }
 
   @override
-  Future<List<PlantEntity>> getPlants() {
-    // TODO: implement getPlants
-    throw UnimplementedError();
+  Future<List<PlantEntity>> getPlants() async {
+    final plantsDocument = await _remoteDatabaseService.getDocument('plants', _authService.currentUserId);
+
+    return plantsDocument.map((plant) => PlantEntityMapper().fromMap(plant)).toList();
   }
 }

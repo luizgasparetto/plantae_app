@@ -8,18 +8,22 @@ class FirestoreRemoteDatabaseServiceImpl implements IRemoteDatabaseService {
   const FirestoreRemoteDatabaseServiceImpl(this.firestore);
 
   @override
-  Future<QuerySnapshot<Map<String, dynamic>>> getCollection(String collection) async {
+  Future<List<Map<String, dynamic>>> getCollection(String collection) async {
     try {
-      return await firestore.collection(collection).get();
+      final response = await firestore.collection(collection).get();
+
+      return response.docs.map((e) => e.data()).toList();
     } on FirebaseException catch (error) {
       throw DatabaseError(message: 'Get Collection Firestore Error', stackTrace: error.stackTrace!);
     }
   }
 
   @override
-  Future<DocumentSnapshot<Map<String, dynamic>>> getDocument(String collection, String document) async {
+  Future<List<Map<String, dynamic>>> getDocument(String collection, String document) async {
     try {
-      return await firestore.collection(collection).doc(document).get();
+      final response = await firestore.collection(collection).doc(document).get();
+
+      return response.data() as List<Map<String, dynamic>>;
     } on FirebaseException catch (error) {
       throw DatabaseError(message: 'Get Document Firestore Error', stackTrace: error.stackTrace!);
     }
