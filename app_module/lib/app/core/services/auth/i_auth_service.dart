@@ -5,4 +5,5 @@ abstract class IAuthService {
   Future<void> registerWithEmail(RegisterWithEmailParams params);
   Future<void> loginWithEmail(LoginWithEmailParams params);
   Future<void> logout();
+  String get currentUserId;
 }

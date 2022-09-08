@@ -4,10 +4,10 @@ class PlantEntity {
   final List<String> images;
   final DateTime createdAt;
 
-  const PlantEntity({
+  PlantEntity({
     required this.id,
     required this.name,
     required this.images,
-    required this.createdAt,
-  });
+    DateTime? createdAt,
+  }) : createdAt = createdAt ?? DateTime.now();
 }

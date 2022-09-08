@@ -49,4 +49,7 @@ class FirebaseAuthServiceImpl implements IAuthService {
 
   @override
   Future<void> logout() async => await _firebaseAuth.signOut();
+
+  @override
+  String get currentUserId => _firebaseAuth.currentUser!.uid;
 }
