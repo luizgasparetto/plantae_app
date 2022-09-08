@@ -19,4 +19,10 @@ class PlantDatasourceImpl implements IPlantDatasource {
 
     return await _remoteDatabaseService.set('plants', _authService.currentUserId, plantEntityMap);
   }
+
+  @override
+  Future<List<PlantEntity>> getPlants() {
+    // TODO: implement getPlants
+    throw UnimplementedError();
+  }
 }

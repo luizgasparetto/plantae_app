@@ -1,3 +1,4 @@
+import 'package:plantae/app/modules/plant/domain/entities/plant_entity.dart';
 import 'package:plantae/app/modules/plant/domain/params/create_plant_params.dart';
 import 'package:plantae/app/core/helpers/either.dart';
 import 'package:plantae/app/core/contracts/i_error.dart';
@@ -15,6 +16,17 @@ class PlantRepositoryImpl implements IPlantRepository {
       await _plantDatasource.createPlant(params);
 
       return right(unit);
+    } on IError catch (error) {
+      return left(error);
+    }
+  }
+
+  @override
+  Future<Either<IError, List<PlantEntity>>> getPlants() async {
+    try {
+      final response = await _plantDatasource.getPlants();
+
+      return right(response);
     } on IError catch (error) {
       return left(error);
     }
