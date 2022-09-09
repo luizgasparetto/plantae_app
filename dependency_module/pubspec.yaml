@@ -20,6 +20,7 @@ dependencies:
   firebase_auth: ^3.7.0
   firebase_core: ^1.21.1
   cloud_firestore: ^3.4.6
+  asuka: ^2.0.1+1
 
 dev_dependencies:
   flutter_test:
