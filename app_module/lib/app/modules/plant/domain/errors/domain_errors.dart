@@ -1,4 +1,4 @@
-import 'package:plantae/app/core/errors/domain_error.dart';
+import '../../../../core/errors/domain_error.dart';
 
 class MissingNameDomainError extends DomainError {
   MissingNameDomainError({required super.message, required super.stackTrace});

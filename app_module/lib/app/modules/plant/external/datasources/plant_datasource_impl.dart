@@ -1,9 +1,9 @@
-import 'package:plantae/app/core/services/auth/i_auth_service.dart';
-import 'package:plantae/app/core/services/database/remote/i_remote_database_service.dart';
-import 'package:plantae/app/modules/plant/domain/entities/plant_entity.dart';
-import 'package:plantae/app/modules/plant/domain/params/create_plant_params.dart';
-import 'package:plantae/app/modules/plant/external/mappers/plant_entity_mapper.dart';
-import 'package:plantae/app/modules/plant/infra/datasources/i_plant_datasource.dart';
+import '../../../../core/services/auth/i_auth_service.dart';
+import '../../../../core/services/database/remote/i_remote_database_service.dart';
+import '../../domain/entities/plant_entity.dart';
+import '../../domain/params/create_plant_params.dart';
+import '../../infra/datasources/i_plant_datasource.dart';
+import '../mappers/plant_entity_mapper.dart';
 
 class PlantDatasourceImpl implements IPlantDatasource {
   final IRemoteDatabaseService _remoteDatabaseService;

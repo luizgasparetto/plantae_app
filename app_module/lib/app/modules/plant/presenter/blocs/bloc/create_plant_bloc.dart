@@ -1,8 +1,8 @@
 import 'package:dependency_module/dependency_module.dart';
 import 'package:flutter/foundation.dart';
-import 'package:plantae/app/modules/plant/domain/usecases/create_plant_usecase.dart';
 
 import '../../../domain/params/create_plant_params.dart';
+import '../../../domain/usecases/create_plant_usecase.dart';
 
 part 'create_plant_event.dart';
 part 'create_plant_state.dart';

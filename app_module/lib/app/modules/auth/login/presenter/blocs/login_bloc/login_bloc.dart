@@ -1,7 +1,8 @@
 import 'package:dependency_module/dependency_module.dart';
 import 'package:flutter/foundation.dart';
-import 'package:plantae/app/modules/auth/login/domain/params/login_with_email_params.dart';
-import 'package:plantae/app/modules/auth/login/domain/usecases/login_with_email_usecase.dart';
+
+import '../../../domain/params/login_with_email_params.dart';
+import '../../../domain/usecases/login_with_email_usecase.dart';
 
 part 'login_event.dart';
 part 'login_state.dart';
