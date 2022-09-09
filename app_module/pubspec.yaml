@@ -16,6 +16,7 @@ dependencies:
 
   dependency_module:
     path: ../dependency_module
+  asuka: ^2.0.1+1
 
 dev_dependencies:
   flutter_test:
