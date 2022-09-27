@@ -1,7 +1,7 @@
-import 'package:plantae/app/core/contracts/i_error.dart';
-import 'package:plantae/app/core/helpers/either.dart';
-import 'package:plantae/app/modules/plant/domain/entities/plant_entity.dart';
-import 'package:plantae/app/modules/plant/domain/repositories/i_plant_repository.dart';
+import '../../../../core/contracts/i_error.dart';
+import '../../../../core/helpers/either.dart';
+import '../entities/plant_entity.dart';
+import '../repositories/i_plant_repository.dart';
 
 abstract class IGetPlantsUsecase {
   Future<Either<IError, List<PlantEntity>>> execute();

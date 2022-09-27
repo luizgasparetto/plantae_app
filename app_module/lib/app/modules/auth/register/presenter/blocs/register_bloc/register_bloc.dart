@@ -1,7 +1,8 @@
 import 'package:dependency_module/dependency_module.dart';
 import 'package:flutter/foundation.dart';
-import 'package:plantae/app/modules/auth/register/domain/params/register_with_email_params.dart';
-import 'package:plantae/app/modules/auth/register/domain/usecases/register_with_email_usecase.dart';
+
+import '../../../domain/params/register_with_email_params.dart';
+import '../../../domain/usecases/register_with_email_usecase.dart';
 
 part 'register_event.dart';
 part 'register_state.dart';

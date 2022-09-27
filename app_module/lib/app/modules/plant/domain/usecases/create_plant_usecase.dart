@@ -1,8 +1,8 @@
-import 'package:plantae/app/core/contracts/i_error.dart';
-import 'package:plantae/app/core/helpers/either.dart';
-import 'package:plantae/app/modules/plant/domain/errors/domain_errors.dart';
-import 'package:plantae/app/modules/plant/domain/params/create_plant_params.dart';
-import 'package:plantae/app/modules/plant/domain/repositories/i_plant_repository.dart';
+import '../../../../core/contracts/i_error.dart';
+import '../../../../core/helpers/either.dart';
+import '../errors/domain_errors.dart';
+import '../params/create_plant_params.dart';
+import '../repositories/i_plant_repository.dart';
 
 abstract class ICreatePlantUsecase {
   Future<Either<IError, Unit>> execute(CreatePlantParams params);

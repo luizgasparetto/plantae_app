@@ -1,8 +1,8 @@
-import 'package:plantae/app/core/contracts/i_error.dart';
-import 'package:plantae/app/core/helpers/either.dart';
-import 'package:plantae/app/modules/auth/register/domain/errors/domain_errors.dart';
-import 'package:plantae/app/modules/auth/register/domain/params/register_with_email_params.dart';
-import 'package:plantae/app/modules/auth/register/domain/repositories/i_register_repository.dart';
+import '../../../../../core/contracts/i_error.dart';
+import '../../../../../core/helpers/either.dart';
+import '../errors/domain_errors.dart';
+import '../params/register_with_email_params.dart';
+import '../repositories/i_register_repository.dart';
 
 abstract class IRegisterWithEmailUsecase {
   Future<Either<IError, Unit>> execute(RegisterWithEmailParams params);
