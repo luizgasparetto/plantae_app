@@ -57,6 +57,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.1.0"
+  brasil_fields:
+    dependency: "direct main"
+    description:
+      name: brasil_fields
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.5.0"
   characters:
     dependency: transitive
     description:
@@ -282,6 +289,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.1"
+  iconly:
+    dependency: transitive
+    description:
+      name: iconly
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.1"
   intl:
     dependency: transitive
     description:

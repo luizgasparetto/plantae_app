@@ -7,3 +7,5 @@ export 'package:flutter_bloc/flutter_bloc.dart';
 export 'package:equatable/equatable.dart';
 export 'package:cloud_firestore/cloud_firestore.dart';
 export 'package:asuka/asuka.dart';
+export 'package:iconly/iconly.dart';
+export 'package:brasil_fields/brasil_fields.dart';

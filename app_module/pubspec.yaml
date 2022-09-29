@@ -19,6 +19,7 @@ dependencies:
 
   plant_design_system:
     path: ../plant_design_system
+  brasil_fields: ^1.5.0
 
 dev_dependencies:
   flutter_test:

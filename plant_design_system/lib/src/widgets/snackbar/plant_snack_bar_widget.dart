@@ -5,7 +5,6 @@ class PlantSnackBarWidget extends SnackBar {
     Key? key,
     required String content,
     required Color color,
-    required IconData icon,
   }) : super(
           key: key,
           duration: const Duration(seconds: 3),
@@ -13,7 +12,6 @@ class PlantSnackBarWidget extends SnackBar {
           behavior: SnackBarBehavior.floating,
           content: Row(
             children: [
-              Icon(icon, color: Colors.white),
               Expanded(
                 child: Text(
                   content,
@@ -24,9 +22,7 @@ class PlantSnackBarWidget extends SnackBar {
           ),
         );
 
-  factory PlantSnackBarWidget.success(String content) =>
-      PlantSnackBarWidget(content: content, color: Colors.green, icon: Icons.check);
+  factory PlantSnackBarWidget.success(String content) => PlantSnackBarWidget(content: content, color: Colors.green);
 
-  factory PlantSnackBarWidget.error(String content) =>
-      PlantSnackBarWidget(content: content, color: Colors.red, icon: Icons.error);
+  factory PlantSnackBarWidget.error(String content) => PlantSnackBarWidget(content: content, color: Colors.red);
 }
