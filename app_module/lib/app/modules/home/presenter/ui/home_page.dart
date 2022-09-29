@@ -17,7 +17,7 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       body: SingleChildScrollView(
         child: Column(
-          children: const [Text("Let's Find your\nDram Plant for\nyour Home"), UtilBrasilFields.obterCpf(cpf)],
+          children: const [Text("Let's Find your\nDram Plant for\nyour Home")],
         ),
       ),
     );

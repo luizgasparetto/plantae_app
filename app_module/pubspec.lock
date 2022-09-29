@@ -58,7 +58,7 @@ packages:
     source: hosted
     version: "2.1.0"
   brasil_fields:
-    dependency: "direct main"
+    dependency: transitive
     description:
       name: brasil_fields
       url: "https://pub.dartlang.org"
