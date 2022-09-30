@@ -10,7 +10,7 @@ class AppWidget extends StatelessWidget {
     return MaterialApp.router(
       title: 'Plantae',
       debugShowCheckedModeBanner: false,
-      theme: LightTheme.get,
+      theme: AppTheme.get,
       routeInformationParser: Modular.routeInformationParser,
       routerDelegate: Modular.routerDelegate,
       builder: Asuka.builder,

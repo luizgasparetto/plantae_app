@@ -8,4 +8,4 @@ export 'package:equatable/equatable.dart';
 export 'package:cloud_firestore/cloud_firestore.dart';
 export 'package:asuka/asuka.dart';
 export 'package:iconly/iconly.dart';
-export 'package:brasil_fields/brasil_fields.dart';
+export 'package:google_fonts/google_fonts.dart';

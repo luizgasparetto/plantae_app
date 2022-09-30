@@ -3,6 +3,8 @@ description: A new Flutter package project.
 version: 0.0.1
 homepage:
 
+publish_to: 'none'
+
 environment:
   sdk: ">=2.17.6 <3.0.0"
   flutter: ">=1.17.0"
@@ -10,10 +12,23 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
+
+  dependency_module:
+    path: ../dependency_module
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^2.0.0
+
+
+flutter:
+  assets:
+    - assets/images/vaso.png
+
+  
+  fonts:
+    - family: PlayFair
+      fonts:
+        - asset: assets/fonts/PlayFair-Font.ttf
 
