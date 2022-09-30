@@ -1,11 +1,9 @@
+import 'package:app_module/app/modules/plant/domain/params/create_plant_params.dart';
+import 'package:app_module/app/modules/plant/external/datasources/plant_datasource_impl.dart';
+import 'package:app_module/app/modules/plant/infra/datasources/i_plant_datasource.dart';
+import 'package:core_module/core.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:plantae/app/core/errors/database_error.dart';
-import 'package:plantae/app/core/services/auth/i_auth_service.dart';
-import 'package:plantae/app/core/services/database/remote/i_remote_database_service.dart';
-import 'package:plantae/app/modules/plant/domain/params/create_plant_params.dart';
-import 'package:plantae/app/modules/plant/external/datasources/plant_datasource_impl.dart';
-import 'package:plantae/app/modules/plant/infra/datasources/i_plant_datasource.dart';
 
 class RemoteDatabaseServiceMock extends Mock implements IRemoteDatabaseService {}
 

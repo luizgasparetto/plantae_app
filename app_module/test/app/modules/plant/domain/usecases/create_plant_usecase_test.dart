@@ -1,11 +1,10 @@
+import 'package:app_module/app/modules/plant/domain/errors/domain_errors.dart';
+import 'package:app_module/app/modules/plant/domain/params/create_plant_params.dart';
+import 'package:app_module/app/modules/plant/domain/repositories/i_plant_repository.dart';
+import 'package:app_module/app/modules/plant/domain/usecases/create_plant_usecase.dart';
+import 'package:core_module/core.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:plantae/app/core/errors/datasource_error.dart';
-import 'package:plantae/app/core/helpers/either.dart';
-import 'package:plantae/app/modules/plant/domain/errors/domain_errors.dart';
-import 'package:plantae/app/modules/plant/domain/params/create_plant_params.dart';
-import 'package:plantae/app/modules/plant/domain/repositories/i_plant_repository.dart';
-import 'package:plantae/app/modules/plant/domain/usecases/create_plant_usecase.dart';
 
 class PlantRepositoryMock extends Mock implements IPlantRepository {}
 

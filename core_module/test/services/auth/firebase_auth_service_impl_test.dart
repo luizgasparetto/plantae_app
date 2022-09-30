@@ -1,11 +1,10 @@
+import 'package:app_module/app/modules/auth/login/domain/params/login_with_email_params.dart';
+import 'package:app_module/app/modules/auth/register/domain/params/register_with_email_params.dart';
+import 'package:core_module/core.dart';
+import 'package:core_module/src/services/auth/firebase_auth_service_impl.dart';
 import 'package:dependency_module/dependency_module.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:plantae/app/core/errors/auth_error.dart';
-import 'package:plantae/app/core/services/auth/firebase_auth_service_impl.dart';
-import 'package:plantae/app/core/services/auth/i_auth_service.dart';
-import 'package:plantae/app/modules/auth/login/domain/params/login_with_email_params.dart';
-import 'package:plantae/app/modules/auth/register/domain/params/register_with_email_params.dart';
 
 class FirebaseAuthMock extends Mock implements FirebaseAuth {}
 
