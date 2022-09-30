@@ -1,4 +1,4 @@
-name: plantae
+name: app_module
 description: A new Flutter project.
 
 publish_to: 'none'
@@ -19,6 +19,9 @@ dependencies:
 
   plant_design_system:
     path: ../plant_design_system
+
+  core_module:
+    path: ../core_module
 
 dev_dependencies:
   flutter_test:

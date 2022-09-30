@@ -1,5 +1,5 @@
-import '../../../../core/services/auth/i_auth_service.dart';
-import '../../../../core/services/database/remote/i_remote_database_service.dart';
+import 'package:core_module/core.dart';
+
 import '../../domain/entities/plant_entity.dart';
 import '../../domain/params/create_plant_params.dart';
 import '../../infra/datasources/i_plant_datasource.dart';

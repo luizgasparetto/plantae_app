@@ -1,8 +1,8 @@
-import 'package:plantae/app/modules/auth/login/domain/params/login_with_email_params.dart';
-import 'package:plantae/app/core/helpers/either.dart';
-import 'package:plantae/app/core/contracts/i_error.dart';
-import 'package:plantae/app/modules/auth/login/domain/repositories/i_login_repository.dart';
-import 'package:plantae/app/modules/auth/login/infra/datasources/i_login_datasource.dart';
+import 'package:core_module/core.dart';
+
+import '../../domain/params/login_with_email_params.dart';
+import '../../domain/repositories/i_login_repository.dart';
+import '../datasources/i_login_datasource.dart';
 
 class LoginRepositoryImpl implements ILoginRepository {
   final ILoginDatasource _loginDatasource;

@@ -1,6 +1,6 @@
-import '../../../../../core/contracts/i_error.dart';
-import '../../../../../core/helpers/either.dart';
-import '../../../register/domain/errors/domain_errors.dart';
+import 'package:core_module/core.dart';
+
+import '../errors/domain_errors.dart';
 import '../params/login_with_email_params.dart';
 import '../repositories/i_login_repository.dart';
 

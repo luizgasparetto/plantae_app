@@ -1,5 +1,5 @@
-import '../../../../../core/contracts/i_error.dart';
-import '../../../../../core/helpers/either.dart';
+import 'package:core_module/core.dart';
+
 import '../errors/domain_errors.dart';
 import '../params/register_with_email_params.dart';
 import '../repositories/i_register_repository.dart';

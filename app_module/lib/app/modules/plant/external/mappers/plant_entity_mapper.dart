@@ -1,6 +1,7 @@
-import 'package:plantae/app/core/contracts/i_mapper.dart';
-import 'package:plantae/app/modules/plant/domain/entities/plant_entity.dart';
-import 'package:plantae/app/modules/plant/external/errors/external_errors.dart';
+import 'package:core_module/core.dart';
+
+import '../../domain/entities/plant_entity.dart';
+import '../errors/external_errors.dart';
 
 class PlantEntityMapper extends IMapper<PlantEntity> {
   @override

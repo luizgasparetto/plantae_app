@@ -1,8 +1,8 @@
-import 'package:plantae/app/modules/auth/register/domain/params/register_with_email_params.dart';
-import 'package:plantae/app/core/helpers/either.dart';
-import 'package:plantae/app/core/contracts/i_error.dart';
-import 'package:plantae/app/modules/auth/register/domain/repositories/i_register_repository.dart';
-import 'package:plantae/app/modules/auth/register/infra/datasources/i_register_datasource.dart';
+import 'package:core_module/core.dart';
+
+import '../../domain/params/register_with_email_params.dart';
+import '../../domain/repositories/i_register_repository.dart';
+import '../datasources/i_register_datasource.dart';
 
 class RegisterRepositoryImpl implements IRegisterRepository {
   final IRegisterDatasource _registerDatasource;

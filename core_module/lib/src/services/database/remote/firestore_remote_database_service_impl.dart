@@ -1,6 +1,7 @@
 import 'package:dependency_module/dependency_module.dart';
-import 'package:plantae/app/core/errors/database_error.dart';
-import 'package:plantae/app/core/services/database/remote/i_remote_database_service.dart';
+
+import '../../../errors/database_error.dart';
+import 'i_remote_database_service.dart';
 
 class FirestoreRemoteDatabaseServiceImpl implements IRemoteDatabaseService {
   final FirebaseFirestore firestore;

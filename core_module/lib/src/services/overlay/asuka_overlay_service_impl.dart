@@ -1,6 +1,6 @@
+import 'package:core_module/src/services/overlay/i_overlay_service.dart';
 import 'package:dependency_module/dependency_module.dart';
 import 'package:plant_design_system/plant_design_system.dart';
-import 'package:plantae/app/core/services/overlay/i_overlay_service.dart';
 
 class AsukaOverlayServiceImpl implements IOverlayService {
   @override

@@ -1,10 +1,9 @@
+import 'package:app_module/app/modules/auth/login/domain/params/login_with_email_params.dart';
+import 'package:app_module/app/modules/auth/register/domain/params/register_with_email_params.dart';
 import 'package:dependency_module/dependency_module.dart';
 
-import 'package:plantae/app/core/services/auth/i_auth_service.dart';
-import 'package:plantae/app/modules/auth/login/domain/params/login_with_email_params.dart';
-import 'package:plantae/app/modules/auth/register/domain/params/register_with_email_params.dart';
-
 import '../../errors/auth_error.dart';
+import 'i_auth_service.dart';
 
 class FirebaseAuthServiceImpl implements IAuthService {
   final FirebaseAuth _firebaseAuth;
