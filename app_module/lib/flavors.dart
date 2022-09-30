@@ -1,4 +1,4 @@
-import 'app/core/enums/flavor_type_enum.dart';
+import 'package:core_module/core.dart';
 
 class Flavors {
   static final Flavors instance = Flavors._();

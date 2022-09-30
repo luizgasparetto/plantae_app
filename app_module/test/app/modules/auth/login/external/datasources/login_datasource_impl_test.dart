@@ -1,10 +1,9 @@
+import 'package:app_module/app/modules/auth/login/domain/params/login_with_email_params.dart';
+import 'package:app_module/app/modules/auth/login/external/datasources/login_datasource_impl.dart';
+import 'package:app_module/app/modules/auth/login/infra/datasources/i_login_datasource.dart';
+import 'package:core_module/core.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:plantae/app/core/errors/auth_error.dart';
-import 'package:plantae/app/core/services/auth/i_auth_service.dart';
-import 'package:plantae/app/modules/auth/login/domain/params/login_with_email_params.dart';
-import 'package:plantae/app/modules/auth/login/external/datasources/login_datasource_impl.dart';
-import 'package:plantae/app/modules/auth/login/infra/datasources/i_login_datasource.dart';
 
 class AuthServiceImpl extends Mock implements IAuthService {}
 

@@ -1,7 +1,7 @@
+import 'package:app_module/app/modules/plant/domain/entities/plant_entity.dart';
+import 'package:app_module/app/modules/plant/external/mappers/plant_entity_mapper.dart';
+import 'package:core_module/core.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:plantae/app/core/errors/mapper_error.dart';
-import 'package:plantae/app/modules/plant/domain/entities/plant_entity.dart';
-import 'package:plantae/app/modules/plant/external/mappers/plant_entity_mapper.dart';
 
 void main() {
   late final PlantEntityMapper sut;

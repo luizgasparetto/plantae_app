@@ -1,5 +1,5 @@
+import 'package:core_module/core.dart';
 import 'package:dependency_module/dependency_module.dart';
-import 'package:plantae/app/core/core_module.dart';
 
 import 'modules/home/home_module.dart';
 
