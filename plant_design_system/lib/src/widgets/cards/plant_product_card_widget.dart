@@ -12,7 +12,6 @@ class PlantProductCardWidget extends StatelessWidget {
 
     return Container(
       width: size.width * 0.5,
-      height: size.height * 0.3,
       decoration: BoxDecoration(
         color: PlantCustomColor.secondaryBackgroundColor.withOpacity(0.7),
         borderRadius: BorderRadius.circular(15),
@@ -22,19 +21,20 @@ class PlantProductCardWidget extends StatelessWidget {
         children: [
           Center(
             child: SizedBox(
-              height: size.height * 0.2,
+              height: size.height * 0.23,
               child: Image.network(
                 'https://png.pngtree.com/element_our/20190530/ourlarge/pngtree-plant-pot-image_1251361.jpg',
               ),
             ),
           ),
+          SizedBox(height: size.height * 0.015),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 12),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Text('Birds Nest Fern', style: theme.textTheme.headline2),
-                Icon(IconlyLight.arrow_right_square, color: PlantCustomColor.primaryColor)
+                Icon(IconlyLight.arrow_right_circle, color: PlantCustomColor.primaryColor)
               ],
             ),
           )

@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       const PlantSearchBarWidget(),
                       Icon(IconlyLight.heart, color: PlantCustomColor.primaryColor, size: 24),
-                      Icon(IconlyLight.notification, color: PlantCustomColor.primaryColor, size: 24),
+                      Icon(IconlyLight.profile, color: PlantCustomColor.primaryColor, size: 24),
                     ],
                   ),
                   SizedBox(height: size.height * 0.04),
@@ -54,14 +54,31 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
-          Padding(
-            padding: const EdgeInsets.all(24),
-            child: Column(
-              children: [
-                SizedBox(height: size.height * 0.01),
-                const PlantProductCardWidget(),
-              ],
-            ),
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: const EdgeInsets.only(left: 24),
+                child: Text('Your plants', style: theme.textTheme.headline4),
+              ),
+              SizedBox(height: size.height * 0.015),
+              SizedBox(
+                height: size.height * 0.3,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  shrinkWrap: true,
+                  itemCount: 5,
+                  itemBuilder: (_, index) {
+                    return Row(
+                      children: [
+                        SizedBox(width: size.width * 0.04),
+                        const PlantProductCardWidget(),
+                      ],
+                    );
+                  },
+                ),
+              ),
+            ],
           )
         ],
       ),

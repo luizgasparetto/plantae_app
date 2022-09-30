@@ -10,11 +10,20 @@ class PlantTextThemes {
         color: PlantCustomColor.textColor,
         fontSize: 24,
         fontWeight: FontWeight.bold,
+        letterSpacing: 1.1,
       ),
       headline2: GoogleFonts.playfairDisplay(
         color: PlantCustomColor.textColor,
         fontSize: 18,
         fontWeight: FontWeight.bold,
+      ),
+      headline4: GoogleFonts.montserrat(
+        color: PlantCustomColor.dialogColor,
+        fontSize: 16,
+      ),
+      headline5: GoogleFonts.montserrat(
+        color: PlantCustomColor.primaryColor,
+        fontSize: 16,
       ),
     );
   }

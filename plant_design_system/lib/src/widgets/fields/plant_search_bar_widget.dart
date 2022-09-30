@@ -35,6 +35,7 @@ class PlantSearchBarWidget extends StatelessWidget {
           hintStyle: TextStyle(
             fontSize: 16,
             color: Colors.grey.withOpacity(0.3),
+            height: 1.4,
           ),
         ),
       ),
