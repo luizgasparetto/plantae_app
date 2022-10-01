@@ -9,9 +9,7 @@ class PlantPageTemplateWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SingleChildScrollView(
-        child: SafeArea(
-          child: child,
-        ),
+        child: child,
       ),
     );
   }

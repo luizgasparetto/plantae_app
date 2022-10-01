@@ -1,4 +1,5 @@
 import 'package:app_module/app/modules/home/presenter/ui/home_page.dart';
+import 'package:app_module/app/modules/user/presenter/ui/profile_page.dart';
 import 'package:dependency_module/dependency_module.dart';
 import 'package:flutter/material.dart';
 import 'package:plant_design_system/plant_design_system.dart';
@@ -21,31 +22,29 @@ class _DashboardPageState extends State<DashboardPage> {
         controller: pageController,
         children: [
           const HomePage(),
-          Container(color: Colors.blue),
-          Container(color: Colors.red),
+          const ProfilePage(),
           Container(color: Colors.yellow),
         ],
       ),
-      bottomNavigationBar: PlantBottomBarWidget(
-        onSelected: (index) => pageController.jumpToPage(index),
-        items: const [
-          PlantBottomBarItem(
-            icon: IconlyLight.home,
-            activeIon: IconlyBold.home,
-          ),
-          PlantBottomBarItem(
-            icon: IconlyLight.chat,
-            activeIon: IconlyBold.chat,
-          ),
-          PlantBottomBarItem(
-            icon: IconlyLight.profile,
-            activeIon: IconlyBold.profile,
-          ),
-          PlantBottomBarItem(
-            icon: IconlyLight.setting,
-            activeIon: IconlyBold.setting,
-          ),
-        ],
+      bottomNavigationBar: Padding(
+        padding: const EdgeInsets.all(15),
+        child: PlantBottomBarWidget(
+          onSelected: (index) => pageController.jumpToPage(index),
+          items: const [
+            PlantBottomBarItem(
+              icon: IconlyLight.home,
+              activeIon: IconlyBold.home,
+            ),
+            PlantBottomBarItem(
+              icon: IconlyLight.profile,
+              activeIon: IconlyBold.profile,
+            ),
+            PlantBottomBarItem(
+              icon: IconlyLight.chat,
+              activeIon: IconlyBold.chat,
+            ),
+          ],
+        ),
       ),
     );
   }

@@ -37,11 +37,11 @@ class _HomePageState extends State<HomePage> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  SizedBox(height: size.height * 0.02),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       const PlantSearchBarWidget(),
-                      Icon(IconlyLight.heart, color: PlantCustomColor.primaryColor, size: 24),
                       Icon(IconlyLight.notification, color: PlantCustomColor.primaryColor, size: 24),
                     ],
                   ),
