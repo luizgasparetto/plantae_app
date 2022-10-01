@@ -1,5 +1,6 @@
 import 'package:dependency_module/dependency_module.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:plant_design_system/plant_design_system.dart';
 
 class AppWidget extends StatelessWidget {
@@ -7,6 +8,12 @@ class AppWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setSystemUIOverlayStyle(
+      SystemUiOverlayStyle(
+        statusBarColor: PlantCustomColor.secondaryBackgroundColor,
+      ),
+    );
+
     return MaterialApp.router(
       title: 'Plantae',
       debugShowCheckedModeBanner: false,
