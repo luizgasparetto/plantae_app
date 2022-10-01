@@ -1,4 +1,4 @@
-import 'package:plantae/app/modules/plant/domain/entities/plant_entity.dart';
+import '../../../plant/domain/entities/plant_entity.dart';
 
 class UserEntity {
   final int id;

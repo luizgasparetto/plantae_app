@@ -1,7 +1,7 @@
-import 'package:plantae/app/core/services/auth/i_auth_service.dart';
-import 'package:plantae/app/core/services/database/remote/i_remote_database_service.dart';
-import 'package:plantae/app/modules/user/domain/entities/user_entity.dart';
-import 'package:plantae/app/modules/user/infra/datasources/i_user_datasource.dart';
+import 'package:core_module/core.dart';
+
+import '../../domain/entities/user_entity.dart';
+import '../../infra/datasources/i_user_datasource.dart';
 
 class UserDatasourceImpl implements IUserDatasource {
   final IAuthService _authService;

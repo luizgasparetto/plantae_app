@@ -1,10 +1,9 @@
+import 'package:app_module/app/modules/user/domain/entities/user_entity.dart';
+import 'package:app_module/app/modules/user/domain/repositories/i_user_repository.dart';
+import 'package:app_module/app/modules/user/domain/usecases/get_current_user_usecase.dart';
+import 'package:core_module/core.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
-import 'package:plantae/app/core/errors/datasource_error.dart';
-import 'package:plantae/app/core/helpers/either.dart';
-import 'package:plantae/app/modules/user/domain/entities/user_entity.dart';
-import 'package:plantae/app/modules/user/domain/repositories/i_user_repository.dart';
-import 'package:plantae/app/modules/user/domain/usecases/get_current_user_usecase.dart';
 
 class UserRepositoryMock extends Mock implements IUserRepository {}
 
