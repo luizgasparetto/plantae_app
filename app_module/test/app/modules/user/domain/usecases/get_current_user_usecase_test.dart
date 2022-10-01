@@ -12,7 +12,7 @@ void main() {
   late final IUserRepository userRepository;
   late final IGetCurrentUserUsecase sut;
 
-  const userEntityStub = UserEntity(id: 1, name: 'test', email: 'email', phone: 'phone', imageUrl: 'img');
+  const userEntityStub = UserEntity(id: 1, name: 'test', email: 'email', phone: 'phone', imageUrl: 'img', plants: []);
 
   setUpAll(() {
     userRepository = UserRepositoryMock();
