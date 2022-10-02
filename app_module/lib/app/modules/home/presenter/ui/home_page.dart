@@ -1,3 +1,4 @@
+import 'package:core_module/core.dart';
 import 'package:dependency_module/dependency_module.dart';
 import 'package:flutter/material.dart';
 import 'package:plant_design_system/plant_design_system.dart';
@@ -33,7 +34,7 @@ class _HomePageState extends State<HomePage> {
                       Text('(you have 5 plants)', style: theme.textTheme.headline2),
                     ],
                   ),
-                  Icon(IconlyBold.plus, color: PlantCustomColor.darkColor, size: 40),
+                  Icon(IconlyBold.plus, color: PlantCustomColor.darkColor, size: 38),
                 ],
               ),
             ),
@@ -67,8 +68,11 @@ class _HomePageState extends State<HomePage> {
                     itemCount: 3,
                     itemBuilder: (_, __) {
                       return Padding(
-                        padding: const EdgeInsets.all(10).copyWith(top: 0),
-                        child: PlantComplexProductCardWidget(isFavorite: false),
+                        padding: const EdgeInsets.only(bottom: 10),
+                        child: InkWell(
+                          onTap: () => Modular.to.pushNamed(AppRoutes.plantDetails),
+                          child: PlantComplexProductCardWidget(isFavorite: false),
+                        ),
                       );
                     },
                   )

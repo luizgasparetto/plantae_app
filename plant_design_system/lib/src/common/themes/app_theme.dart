@@ -8,5 +8,6 @@ class AppTheme {
     scaffoldBackgroundColor: PlantCustomColor.backgroundColor,
     primaryColor: const Color.fromRGBO(0, 123, 33, 1),
     textTheme: PlantTextThemes.getTheme,
+    iconTheme: IconThemeData(color: PlantCustomColor.darkColor),
   );
 }

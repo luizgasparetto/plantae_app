@@ -1,5 +1,6 @@
 library core_module;
 
+export 'src/constants/constants.dart';
 export 'src/contracts/contracts.dart';
 export 'src/enums/enums.dart';
 export 'src/errors/errors.dart';
