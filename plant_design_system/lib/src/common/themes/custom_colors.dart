@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 
 class PlantCustomColor {
-  static Color backgroundColor = const Color.fromRGBO(245, 245, 243, 1);
-  static Color secondaryBackgroundColor = const Color.fromRGBO(219, 223, 212, 1);
-  static Color textColor = const Color.fromRGBO(5, 44, 60, 1);
   static Color primaryColor = const Color.fromRGBO(0, 123, 33, 1);
-  static Color dialogColor = const Color.fromRGBO(131, 132, 131, 1);
+  static Color backgroundColor = const Color.fromRGBO(247, 247, 247, 1);
+
+  static Color darkColor = const Color.fromRGBO(27, 27, 27, 1);
+  static Color dialogColor = const Color.fromRGBO(209, 209, 209, 1);
   static Color lightTextColor = const Color.fromRGBO(173, 190, 227, 1);
+
+  static Color earthyColor = const Color.fromRGBO(242, 238, 233, 1);
 }

@@ -20,31 +20,23 @@ class _DashboardPageState extends State<DashboardPage> {
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
-        children: [
-          const HomePage(),
-          const ProfilePage(),
-          Container(color: Colors.yellow),
+        children: const [
+          HomePage(),
+          ProfilePage(),
         ],
       ),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(15),
-        child: PlantBottomBarWidget(
-          onSelected: (index) => pageController.jumpToPage(index),
-          items: const [
-            PlantBottomBarItem(
-              icon: IconlyLight.home,
-              activeIon: IconlyBold.home,
-            ),
-            PlantBottomBarItem(
-              icon: IconlyLight.profile,
-              activeIon: IconlyBold.profile,
-            ),
-            PlantBottomBarItem(
-              icon: IconlyLight.chat,
-              activeIon: IconlyBold.chat,
-            ),
-          ],
-        ),
+      bottomNavigationBar: PlantBottomBarWidget(
+        onSelected: (index) => pageController.jumpToPage(index),
+        items: const [
+          PlantBottomBarItem(
+            icon: IconlyLight.home,
+            activeIon: IconlyBold.home,
+          ),
+          PlantBottomBarItem(
+            icon: IconlyLight.profile,
+            activeIon: IconlyBold.profile,
+          ),
+        ],
       ),
     );
   }
