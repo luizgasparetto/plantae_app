@@ -9,4 +9,6 @@ class PlantCustomColor {
   static Color lightTextColor = const Color.fromRGBO(173, 190, 227, 1);
 
   static Color earthyColor = const Color.fromRGBO(242, 238, 233, 1);
+
+  static Color errorColor = const Color.fromRGBO(199, 84, 87, 1);
 }

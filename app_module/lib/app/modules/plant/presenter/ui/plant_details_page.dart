@@ -1,3 +1,4 @@
+import 'package:dependency_module/dependency_module.dart';
 import 'package:flutter/material.dart';
 import 'package:plant_design_system/plant_design_system.dart';
 
@@ -11,15 +12,20 @@ class PlantDetailsPage extends StatefulWidget {
 class _PlantDetailsPageState extends State<PlantDetailsPage> {
   @override
   Widget build(BuildContext context) {
+    final size = MediaQuery.of(context).size;
+
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: PlantCustomColor.backgroundColor,
-        elevation: 0,
-        iconTheme: IconThemeData(color: PlantCustomColor.darkColor),
-      ),
+      backgroundColor: PlantCustomColor.primaryColor.withOpacity(0.2),
       body: SingleChildScrollView(
         child: Column(
-          children: [],
+          children: [
+            Padding(
+              padding: const EdgeInsets.only(top: 32, left: 16),
+              child: PlantBackButtonWidget(
+                onTap: () => Modular.to.pop(),
+              ),
+            ),
+          ],
         ),
       ),
     );
