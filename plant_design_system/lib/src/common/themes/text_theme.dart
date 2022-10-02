@@ -6,13 +6,13 @@ import 'custom_colors.dart';
 class PlantTextThemes {
   static TextTheme get getTheme {
     return TextTheme(
-      headline1: GoogleFonts.playfairDisplay(
+      headline1: GoogleFonts.lato(
         color: PlantCustomColor.textColor,
         fontSize: 24,
         fontWeight: FontWeight.bold,
         letterSpacing: 1.1,
       ),
-      headline2: GoogleFonts.playfairDisplay(
+      headline2: GoogleFonts.lato(
         color: PlantCustomColor.textColor,
         fontSize: 18,
         fontWeight: FontWeight.bold,

@@ -6,4 +6,5 @@ class PlantCustomColor {
   static Color textColor = const Color.fromRGBO(5, 44, 60, 1);
   static Color primaryColor = const Color.fromRGBO(0, 123, 33, 1);
   static Color dialogColor = const Color.fromRGBO(131, 132, 131, 1);
+  static Color lightTextColor = const Color.fromRGBO(173, 190, 227, 1);
 }

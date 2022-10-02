@@ -10,7 +10,7 @@ class PlantSearchBarWidget extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return SizedBox(
-      width: size.width * 0.6,
+      width: size.width * 0.75,
       height: size.height * 0.05,
       child: TextFormField(
         maxLines: 1,
