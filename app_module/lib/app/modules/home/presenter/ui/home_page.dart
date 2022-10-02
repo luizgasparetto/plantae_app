@@ -15,72 +15,68 @@ class _HomePageState extends State<HomePage> {
     final size = MediaQuery.of(context).size;
     final theme = Theme.of(context);
 
-    return PlantPageTemplateWidget(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Container(
-            width: size.width,
-            height: 220,
-            decoration: BoxDecoration(
-              gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [
-                  PlantCustomColor.secondaryBackgroundColor,
-                  PlantCustomColor.backgroundColor,
+    return Scaffold(
+      body: SingleChildScrollView(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: size.height * 0.1),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text('My Garden', style: theme.textTheme.headline1),
+                      Text('(you have 5 plants)', style: theme.textTheme.headline2),
+                    ],
+                  ),
+                  Icon(IconlyBold.plus, color: PlantCustomColor.darkColor, size: 40),
                 ],
               ),
             ),
-            child: Padding(
-              padding: const EdgeInsets.all(24),
+            SizedBox(height: size.height * 0.05),
+            SizedBox(
+              height: size.height * 0.3,
+              child: ListView.builder(
+                itemCount: 5,
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (_, __) {
+                  return Row(
+                    children: [
+                      SizedBox(width: size.width * 0.05),
+                      const PlantBasicProductCardWidget(name: 'Montsera'),
+                    ],
+                  );
+                },
+              ),
+            ),
+            SizedBox(height: size.height * 0.03),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: size.height * 0.02),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      const PlantSearchBarWidget(),
-                      Icon(IconlyLight.notification, color: PlantCustomColor.primaryColor, size: 24),
-                    ],
-                  ),
-                  SizedBox(height: size.height * 0.04),
-                  Text(
-                    "Let's Find your\nDream Plant for\nyour Home",
-                    style: theme.textTheme.headline1,
-                  ),
+                  Text('Discover new plants', style: theme.textTheme.headline1!.copyWith(fontSize: 26)),
+                  ListView.builder(
+                    physics: const NeverScrollableScrollPhysics(),
+                    shrinkWrap: true,
+                    itemCount: 3,
+                    itemBuilder: (_, __) {
+                      return Padding(
+                        padding: const EdgeInsets.all(10).copyWith(top: 0),
+                        child: PlantComplexProductCardWidget(isFavorite: false),
+                      );
+                    },
+                  )
                 ],
               ),
-            ),
-          ),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(left: 24),
-                child: Text('Your plants', style: theme.textTheme.headline4),
-              ),
-              SizedBox(height: size.height * 0.015),
-              SizedBox(
-                height: size.height * 0.3,
-                child: ListView.builder(
-                  scrollDirection: Axis.horizontal,
-                  shrinkWrap: true,
-                  itemCount: 5,
-                  itemBuilder: (_, index) {
-                    return Row(
-                      children: [
-                        SizedBox(width: size.width * 0.04),
-                        const PlantProductCardWidget(),
-                      ],
-                    );
-                  },
-                ),
-              ),
-            ],
-          )
-        ],
+            )
+          ],
+        ),
       ),
     );
   }

@@ -33,7 +33,7 @@ class _PlantBottomBarWidgetState extends State<PlantBottomBarWidget> {
             ),
           ),
         ),
-        selectedItemColor: PlantCustomColor.primaryColor,
+        selectedItemColor: PlantCustomColor.darkColor,
         unselectedItemColor: PlantCustomColor.dialogColor,
         showSelectedLabels: false,
         showUnselectedLabels: false,

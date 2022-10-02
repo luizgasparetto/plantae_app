@@ -27,7 +27,7 @@ class _DashboardPageState extends State<DashboardPage> {
         ],
       ),
       bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(15),
+        padding: const EdgeInsets.all(15).copyWith(top: 0),
         child: PlantBottomBarWidget(
           onSelected: (index) => pageController.jumpToPage(index),
           items: const [

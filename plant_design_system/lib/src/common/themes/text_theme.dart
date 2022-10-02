@@ -6,18 +6,22 @@ import 'custom_colors.dart';
 class PlantTextThemes {
   static TextTheme get getTheme {
     return TextTheme(
-      headline1: GoogleFonts.lato(
-        color: PlantCustomColor.textColor,
-        fontSize: 24,
+      headline1: GoogleFonts.jost(
+        color: PlantCustomColor.darkColor,
+        fontSize: 30,
         fontWeight: FontWeight.bold,
-        letterSpacing: 1.1,
       ),
-      headline2: GoogleFonts.lato(
-        color: PlantCustomColor.textColor,
+      headline2: GoogleFonts.jost(
+        color: PlantCustomColor.dialogColor,
         fontSize: 18,
         fontWeight: FontWeight.bold,
       ),
-      headline4: GoogleFonts.montserrat(
+      headline3: GoogleFonts.jost(
+        color: PlantCustomColor.darkColor,
+        fontSize: 15,
+        fontWeight: FontWeight.w500,
+      ),
+      headline4: GoogleFonts.jost(
         color: PlantCustomColor.dialogColor,
         fontSize: 16,
       ),
