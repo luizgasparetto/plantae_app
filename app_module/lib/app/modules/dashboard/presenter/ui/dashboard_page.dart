@@ -28,14 +28,10 @@ class _DashboardPageState extends State<DashboardPage> {
       bottomNavigationBar: PlantBottomBarWidget(
         onSelected: (index) => pageController.jumpToPage(index),
         items: const [
-          PlantBottomBarItem(
-            icon: IconlyLight.home,
-            activeIon: IconlyBold.home,
-          ),
-          PlantBottomBarItem(
-            icon: IconlyLight.profile,
-            activeIon: IconlyBold.profile,
-          ),
+          PlantBottomBarItem(icon: IconlyLight.home, activeIon: IconlyBold.home),
+          // PlantBottomBarItem(icon: IconlyLight.search, activeIon: IconlyBold.search),
+          // PlantBottomBarItem(icon: IconlyLight.chat, activeIon: IconlyBold.chat),
+          PlantBottomBarItem(icon: IconlyLight.profile, activeIon: IconlyBold.profile),
         ],
       ),
     );

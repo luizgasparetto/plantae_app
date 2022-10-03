@@ -1,5 +1,5 @@
-import 'package:app_module/app/modules/auth/login/domain/params/login_with_email_params.dart';
-import 'package:app_module/app/modules/auth/register/domain/params/register_with_email_params.dart';
+import 'package:app_module/app/modules/auth/submodules/login/domain/params/login_with_email_params.dart';
+import 'package:app_module/app/modules/auth/submodules/register/domain/params/register_with_email_params.dart';
 import 'package:core_module/core.dart';
 import 'package:core_module/src/services/auth/firebase_auth_service_impl.dart';
 import 'package:dependency_module/dependency_module.dart';

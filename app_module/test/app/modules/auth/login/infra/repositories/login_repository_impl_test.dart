@@ -1,7 +1,7 @@
-import 'package:app_module/app/modules/auth/login/domain/params/login_with_email_params.dart';
-import 'package:app_module/app/modules/auth/login/domain/repositories/i_login_repository.dart';
-import 'package:app_module/app/modules/auth/login/infra/datasources/i_login_datasource.dart';
-import 'package:app_module/app/modules/auth/login/infra/repositories/login_repository_impl.dart';
+import 'package:app_module/app/modules/auth/submodules/login/domain/params/login_with_email_params.dart';
+import 'package:app_module/app/modules/auth/submodules/login/domain/repositories/i_login_repository.dart';
+import 'package:app_module/app/modules/auth/submodules/login/infra/datasources/i_login_datasource.dart';
+import 'package:app_module/app/modules/auth/submodules/login/infra/repositories/login_repository_impl.dart';
 import 'package:core_module/core.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';

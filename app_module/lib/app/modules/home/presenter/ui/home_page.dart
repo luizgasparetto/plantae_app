@@ -22,20 +22,12 @@ class _HomePageState extends State<HomePage> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             SizedBox(height: size.height * 0.1),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('My Garden', style: theme.textTheme.headline1),
-                      Text('(you have 5 plants)', style: theme.textTheme.headline2),
-                    ],
-                  ),
-                  Icon(IconlyBold.plus, color: PlantCustomColor.darkColor, size: 38),
-                ],
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24),
+              child: PlantTitleBannerWidget(
+                title: 'My Garden',
+                subtitle: '(you have 5 plants)',
+                icon: IconlyBold.plus,
               ),
             ),
             SizedBox(height: size.height * 0.05),
@@ -49,7 +41,10 @@ class _HomePageState extends State<HomePage> {
                   return Row(
                     children: [
                       SizedBox(width: size.width * 0.05),
-                      const PlantBasicProductCardWidget(name: 'Montsera'),
+                      InkWell(
+                        onTap: () => Modular.to.pushNamed(AppRoutes.plantDetails),
+                        child: const PlantBasicProductCardWidget(name: 'Montsera'),
+                      ),
                     ],
                   );
                 },

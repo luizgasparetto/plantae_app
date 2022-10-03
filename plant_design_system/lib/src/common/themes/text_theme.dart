@@ -25,9 +25,9 @@ class PlantTextThemes {
         color: PlantCustomColor.dialogColor,
         fontSize: 16,
       ),
-      headline5: GoogleFonts.montserrat(
-        color: PlantCustomColor.primaryColor,
-        fontSize: 16,
+      headline5: GoogleFonts.jost(
+        color: PlantCustomColor.darkColor,
+        fontSize: 14,
       ),
     );
   }

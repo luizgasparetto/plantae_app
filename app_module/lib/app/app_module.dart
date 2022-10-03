@@ -1,3 +1,4 @@
+import 'package:app_module/app/modules/auth/auth_module.dart';
 import 'package:app_module/app/modules/dashboard/dashboard_module.dart';
 import 'package:app_module/app/modules/plant/plant_module.dart';
 import 'package:core_module/core.dart';
@@ -9,7 +10,8 @@ class AppModule extends Module {
 
   @override
   List<ModularRoute> get routes => [
-        ModuleRoute(Modular.initialRoute, module: DashboardModule()),
+        ModuleRoute(Modular.initialRoute, module: AuthModule()),
+        ModuleRoute('/dashboard', module: DashboardModule()),
         ModuleRoute('/plant', module: PlantModule()),
       ];
 }

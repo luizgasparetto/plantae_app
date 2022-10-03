@@ -1,6 +1,6 @@
-import 'package:app_module/app/modules/auth/register/domain/params/register_with_email_params.dart';
-import 'package:app_module/app/modules/auth/register/domain/repositories/i_register_repository.dart';
-import 'package:app_module/app/modules/auth/register/domain/usecases/register_with_email_usecase.dart';
+import 'package:app_module/app/modules/auth/submodules/register/domain/params/register_with_email_params.dart';
+import 'package:app_module/app/modules/auth/submodules/register/domain/repositories/i_register_repository.dart';
+import 'package:app_module/app/modules/auth/submodules/register/domain/usecases/register_with_email_usecase.dart';
 import 'package:core_module/core.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mocktail/mocktail.dart';
