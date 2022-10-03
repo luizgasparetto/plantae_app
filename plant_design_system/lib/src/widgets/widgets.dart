@@ -1,6 +1,7 @@
 export 'snackbar/plant_snack_bar_widget.dart';
 
 export 'fields/plant_search_bar_widget.dart';
+export 'fields/plant_text_field_widget.dart';
 
 export 'initial/plant_page_template_widget.dart';
 
