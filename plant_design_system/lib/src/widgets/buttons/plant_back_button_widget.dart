@@ -21,10 +21,13 @@ class PlantBackButtonWidget extends StatelessWidget {
       ),
       child: InkWell(
         onTap: onTap,
-        child: Icon(
-          IconlyLight.arrow_left_2,
-          color: PlantCustomColor.darkColor,
-          size: 27,
+        child: Padding(
+          padding: const EdgeInsets.only(right: 2),
+          child: Icon(
+            IconlyLight.arrow_left_2,
+            color: PlantCustomColor.darkColor,
+            size: 27,
+          ),
         ),
       ),
     );

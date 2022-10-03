@@ -60,7 +60,7 @@ class _ProfilePageState extends State<ProfilePage> {
                     ),
                     PlantBasicRedirectTile(
                       title: 'Delete Account',
-                      icon: IconlyLight.logout,
+                      icon: IconlyLight.delete,
                       tileColor: PlantCustomColor.errorColor,
                     ),
                   ],

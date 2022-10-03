@@ -13,6 +13,7 @@ export 'bottom_bar/plant_bottom_bar_item.dart';
 
 export 'buttons/plant_secondary_button_widget.dart';
 export 'buttons/plant_back_button_widget.dart';
+export 'buttons/plant_favorite_button_widget.dart';
 
 export 'banner/plant_title_banner_widget.dart';
 

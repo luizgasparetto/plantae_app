@@ -20,19 +20,17 @@ class _DashboardPageState extends State<DashboardPage> {
       body: PageView(
         physics: const NeverScrollableScrollPhysics(),
         controller: pageController,
-        children: [
-          const HomePage(),
-          Container(color: Colors.red),
-          Container(color: Colors.blue),
-          const ProfilePage(),
+        children: const [
+          HomePage(),
+          ProfilePage(),
         ],
       ),
       bottomNavigationBar: PlantBottomBarWidget(
         onSelected: (index) => pageController.jumpToPage(index),
         items: const [
           PlantBottomBarItem(icon: IconlyLight.home, activeIon: IconlyBold.home),
-          PlantBottomBarItem(icon: IconlyLight.search, activeIon: IconlyBold.search),
-          PlantBottomBarItem(icon: IconlyLight.chat, activeIon: IconlyBold.chat),
+          // PlantBottomBarItem(icon: IconlyLight.search, activeIon: IconlyBold.search),
+          // PlantBottomBarItem(icon: IconlyLight.chat, activeIon: IconlyBold.chat),
           PlantBottomBarItem(icon: IconlyLight.profile, activeIon: IconlyBold.profile),
         ],
       ),

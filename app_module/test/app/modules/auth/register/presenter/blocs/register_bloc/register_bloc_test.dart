@@ -1,6 +1,6 @@
-import 'package:app_module/app/modules/auth/register/domain/params/register_with_email_params.dart';
-import 'package:app_module/app/modules/auth/register/domain/usecases/register_with_email_usecase.dart';
-import 'package:app_module/app/modules/auth/register/presenter/blocs/register_bloc/register_bloc.dart';
+import 'package:app_module/app/modules/auth/submodules/register/domain/params/register_with_email_params.dart';
+import 'package:app_module/app/modules/auth/submodules/register/domain/usecases/register_with_email_usecase.dart';
+import 'package:app_module/app/modules/auth/submodules/register/presenter/blocs/register_bloc/register_bloc.dart';
 import 'package:bloc_test/bloc_test.dart';
 import 'package:core_module/core.dart';
 import 'package:flutter_test/flutter_test.dart';

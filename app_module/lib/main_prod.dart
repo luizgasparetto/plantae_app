@@ -7,10 +7,12 @@ import 'app/app_widget.dart';
 
 import 'flavors.dart';
 
-void main() {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   Flavors.flavorType = FlavorTypeEnum.prod;
+
+  await Firebase.initializeApp();
 
   runApp(ModularApp(module: AppModule(), child: const AppWidget()));
 }
