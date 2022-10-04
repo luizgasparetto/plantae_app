@@ -42,7 +42,7 @@ void main() {
         final response = await sut.loginWithEmail(kLoginWithEmailParams);
 
         verify(() => loginDatasource.loginWithEmail(any())).called(1);
-        expect(response.fold((l) => l, (r) => r), isA<DatabaseError>());
+        expect(response.fold((l) => l, (r) => r), isA<DatasourceError>());
       });
     });
   });
