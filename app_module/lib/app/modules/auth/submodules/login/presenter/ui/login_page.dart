@@ -15,23 +15,33 @@ class _LoginPageState extends State<LoginPage> {
     final size = MediaQuery.of(context).size;
 
     return Scaffold(
-      backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Padding(
           padding: const EdgeInsets.all(24),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              SizedBox(height: size.height * 0.05),
-              Text('Login', style: theme.textTheme.headline1),
-              Text('Hey, enter your details below to access your account', style: theme.textTheme.headline2),
-              SizedBox(height: size.height * 0.05),
+              SizedBox(height: size.height * 0.1),
+              Text('Hello Again!', style: theme.textTheme.headline1),
+              Text("Welcome back you've been missed!", style: theme.textTheme.headline2),
+              SizedBox(height: size.height * 0.08),
               Form(
                 child: Column(
                   children: [
                     const PlantTextFieldWidget(hintText: 'E-mail'),
                     SizedBox(height: size.height * 0.02),
                     const PlantTextFieldWidget(hintText: 'Password'),
+                    Align(
+                      alignment: Alignment.centerRight,
+                      child: PlantTextButtonWidget(
+                        buttonLabel: 'Recovery Password',
+                        onPressed: () {},
+                      ),
+                    ),
+                    SizedBox(height: size.height * 0.06),
+                    PlantPrimaryButtonWidget(
+                      buttonLabel: 'Sign In',
+                      onPressed: () {},
+                    )
                   ],
                 ),
               )

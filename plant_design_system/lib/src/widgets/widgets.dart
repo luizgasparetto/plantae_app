@@ -12,9 +12,11 @@ export 'cards/plant_user_info_card_widget.dart';
 export 'bottom_bar/plant_bottom_bar_widget.dart';
 export 'bottom_bar/plant_bottom_bar_item.dart';
 
+export 'buttons/plant_primary_button_widget.dart';
 export 'buttons/plant_secondary_button_widget.dart';
 export 'buttons/plant_back_button_widget.dart';
 export 'buttons/plant_favorite_button_widget.dart';
+export 'buttons/plant_text_button_widget.dart';
 
 export 'banner/plant_title_banner_widget.dart';
 

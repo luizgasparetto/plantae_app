@@ -11,7 +11,7 @@ class UserDatasourceImpl implements IUserDatasource {
 
   @override
   Future<UserEntity> getCurrentUser() async {
-    final userData = await _remoteDatabaseService.getDocument('users', _authService.currentUserId);
+    await _remoteDatabaseService.getDocument('users', _authService.currentUserId);
 
     return const UserEntity(id: 1, name: 'name', email: 'email', phone: 'phone', imageUrl: ' imageUrl', plants: []);
   }
