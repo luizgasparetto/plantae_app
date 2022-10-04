@@ -11,7 +11,6 @@
 migrate_working_dir/
 
 .vscode
-coverage
 
 # IntelliJ related
 *.iml
