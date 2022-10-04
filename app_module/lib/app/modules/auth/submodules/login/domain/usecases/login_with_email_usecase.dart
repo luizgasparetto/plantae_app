@@ -15,7 +15,6 @@ class LoginWithEmailUsecaseImpl implements ILoginWithEmailUsecase {
 
   @override
   Future<Either<IError, Unit>> execute(LoginWithEmailParams params) async {
-    // TODO - Change to ValueObject
     if (params.email.isEmpty || params.password.isEmpty) {
       return left(EmptyParamsDomainError(message: 'Login Empty Params', stackTrace: StackTrace.current));
     }
