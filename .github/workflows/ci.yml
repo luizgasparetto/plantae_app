@@ -49,5 +49,5 @@ jobs:
       - uses: dorny/test-reporter@v1
         with:
           name: Tests Results
-          path: test-results.json
+          path: ./app_module/test-results.json
           reporter: flutter-json
