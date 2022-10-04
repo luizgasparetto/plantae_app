@@ -42,7 +42,7 @@ jobs:
 
       - uses: VeryGoodOpenSource/very_good_coverage@v1
         with:
-          path: './coverage/lcov.info'
+          path: './app_module/coverage/lcov.info'
           min_coverage: 80
           exclude: '**/*_observer.dart **/change.dart'
 
