@@ -4,15 +4,21 @@ import 'package:flutter/material.dart';
 import '../../../plant_design_system.dart';
 
 class PlantTextFieldWidget extends StatelessWidget {
+  final TextEditingController controller;
   final String hintText;
 
-  const PlantTextFieldWidget({Key? key, required this.hintText}) : super(key: key);
+  const PlantTextFieldWidget({
+    Key? key,
+    required this.controller,
+    required this.hintText,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
 
     return TextFormField(
+      controller: controller,
       autovalidateMode: AutovalidateMode.onUserInteraction,
       cursorColor: PlantCustomColor.buttonColor,
       style: theme.textTheme.headline2!.copyWith(color: PlantCustomColor.darkColor, fontSize: 17),
