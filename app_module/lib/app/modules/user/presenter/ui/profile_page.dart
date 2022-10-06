@@ -16,60 +16,45 @@ class _ProfilePageState extends State<ProfilePage> {
 
     return Scaffold(
       body: SingleChildScrollView(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              SizedBox(height: size.height * 0.1),
-              const PlantTitleBannerWidget(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SizedBox(height: size.height * 0.1),
+            const Padding(
+              padding: EdgeInsets.symmetric(horizontal: 24),
+              child: PlantTitleBannerWidget(
                 title: 'Hey, Luiz',
                 subtitle: 'you can change all your settings',
                 icon: IconlyBold.profile,
               ),
-              SizedBox(height: size.height * 0.06),
-              SizedBox(
-                height: size.height * 0.6,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    const PlantBasicRedirectTile(
-                      title: 'Settings',
-                      icon: IconlyBold.setting,
-                    ),
-                    const PlantBasicRedirectTile(
-                      title: 'Notifications',
-                      icon: IconlyBold.notification,
-                    ),
-                    const PlantBasicRedirectTile(
-                      title: 'Privacy Policy',
-                      icon: IconlyBold.danger,
-                    ),
-                    const PlantBasicRedirectTile(
-                      title: 'Terms of Service',
-                      icon: IconlyBold.paper,
-                    ),
-                    const PlantBasicRedirectTile(
-                      title: 'Community Guidelines',
-                      icon: IconlyBold.user_3,
-                    ),
-                    PlantBasicRedirectTile(
-                      title: 'Logout',
-                      icon: IconlyLight.logout,
-                      tileColor: PlantCustomColor.errorColor,
-                    ),
-                    PlantBasicRedirectTile(
-                      title: 'Delete Account',
-                      icon: IconlyLight.delete,
-                      tileColor: PlantCustomColor.errorColor,
-                    ),
-                  ],
-                ),
-              )
-            ],
-          ),
+            ),
+            SizedBox(height: size.height * 0.05),
+            SizedBox(
+              height: size.height * 0.6,
+              child: Column(
+                children: [
+                  PlantBasicRedirectTile(
+                    title: 'Settings',
+                    subTitle: 'Setup your settings',
+                    icon: IconlyLight.setting,
+                    onTap: () {},
+                  ),
+                  PlantBasicRedirectTile(
+                    title: 'Notifications',
+                    subTitle: 'My notification center',
+                    icon: IconlyBold.setting,
+                    onTap: () {},
+                  ),
+                ],
+              ),
+            )
+          ],
         ),
       ),
     );
   }
 }
+
+//EdgeInsets.symmetric(horizontal: 24),
+
+

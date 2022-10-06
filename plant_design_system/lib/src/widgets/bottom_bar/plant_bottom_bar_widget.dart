@@ -20,34 +20,28 @@ class _PlantBottomBarWidgetState extends State<PlantBottomBarWidget> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.all(16).copyWith(top: 0),
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(20),
-        child: BottomNavigationBar(
-          items: List.from(
-            widget.items.map(
-              (e) => BottomNavigationBarItem(
-                label: '',
-                backgroundColor: Colors.white,
-                icon: Icon(e.icon),
-                activeIcon: Icon(e.activeIon),
-              ),
-            ),
+    return BottomNavigationBar(
+      items: List.from(
+        widget.items.map(
+          (e) => BottomNavigationBarItem(
+            label: '',
+            backgroundColor: Colors.white,
+            icon: Icon(e.icon),
+            activeIcon: Icon(e.activeIon),
           ),
-          selectedItemColor: PlantCustomColor.darkColor,
-          unselectedItemColor: PlantCustomColor.dialogColor,
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          currentIndex: selected,
-          onTap: (index) {
-            widget.onSelected(index);
-            setState(() {
-              selected = index;
-            });
-          },
         ),
       ),
+      selectedItemColor: PlantCustomColor.darkColor,
+      unselectedItemColor: PlantCustomColor.dialogColor,
+      showSelectedLabels: false,
+      showUnselectedLabels: false,
+      currentIndex: selected,
+      onTap: (index) {
+        widget.onSelected(index);
+        setState(() {
+          selected = index;
+        });
+      },
     );
   }
 }

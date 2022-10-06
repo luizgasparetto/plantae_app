@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "app_module"
+		},
+		{
+			"path": "core_module"
+		},
+		{
+			"path": "dependency_module"
+		},
+		{
+			"path": "plant_design_system"
+		}
+	],
+	"settings": {}
+}
