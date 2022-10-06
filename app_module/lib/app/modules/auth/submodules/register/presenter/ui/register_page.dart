@@ -10,6 +10,8 @@ class RegisterPage extends StatefulWidget {
 }
 
 class _RegisterPageState extends State<RegisterPage> {
+  final basicController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -27,11 +29,20 @@ class _RegisterPageState extends State<RegisterPage> {
             Form(
               child: Column(
                 children: [
-                  const PlantTextFieldWidget(hintText: 'Your Name'),
+                  PlantTextFieldWidget(
+                    hintText: 'Your Name',
+                    controller: basicController,
+                  ),
                   SizedBox(height: size.height * 0.02),
-                  const PlantTextFieldWidget(hintText: 'E-mail'),
+                  PlantTextFieldWidget(
+                    hintText: 'E-mail',
+                    controller: basicController,
+                  ),
                   SizedBox(height: size.height * 0.02),
-                  const PlantTextFieldWidget(hintText: 'Password'),
+                  PlantTextFieldWidget(
+                    hintText: 'Password',
+                    controller: basicController,
+                  ),
                   SizedBox(height: size.height * 0.06),
                   PlantPrimaryButtonWidget(
                     buttonLabel: 'Sign In',

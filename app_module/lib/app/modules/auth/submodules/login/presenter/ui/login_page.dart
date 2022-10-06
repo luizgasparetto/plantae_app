@@ -3,6 +3,8 @@ import 'package:dependency_module/dependency_module.dart';
 import 'package:flutter/material.dart';
 import 'package:plant_design_system/plant_design_system.dart';
 
+import '../controllers/login_controller.dart';
+
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
 
@@ -11,6 +13,8 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
+  final loginController = Modular.get<LoginController>();
+
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -28,9 +32,15 @@ class _LoginPageState extends State<LoginPage> {
             Form(
               child: Column(
                 children: [
-                  const PlantTextFieldWidget(hintText: 'E-mail'),
+                  PlantTextFieldWidget(
+                    controller: loginController.emailController,
+                    hintText: 'E-mail',
+                  ),
                   SizedBox(height: size.height * 0.02),
-                  const PlantTextFieldWidget(hintText: 'Password'),
+                  PlantTextFieldWidget(
+                    controller: loginController.passwordController,
+                    hintText: 'Password',
+                  ),
                   Align(
                     alignment: Alignment.centerRight,
                     child: PlantTextButtonWidget(
@@ -41,7 +51,7 @@ class _LoginPageState extends State<LoginPage> {
                   SizedBox(height: size.height * 0.06),
                   PlantPrimaryButtonWidget(
                     buttonLabel: 'Sign In',
-                    onPressed: () => Modular.to.navigate(AppRoutes.dashboard),
+                    onPressed: () => loginController.handleLoginWithEmail(),
                   ),
                   SizedBox(height: size.height * 0.03),
                   Row(
