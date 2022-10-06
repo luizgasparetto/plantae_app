@@ -5,13 +5,13 @@ import '../../../plant_design_system.dart';
 class PlantTitleBannerWidget extends StatelessWidget {
   final String title;
   final String subtitle;
-  final IconData icon;
+  final IconData? icon;
 
   const PlantTitleBannerWidget({
     super.key,
     required this.title,
     required this.subtitle,
-    required this.icon,
+    this.icon,
   });
 
   @override

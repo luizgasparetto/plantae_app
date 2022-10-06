@@ -41,7 +41,7 @@ class _RegisterPageState extends State<RegisterPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text("Already have an account? ", style: theme.textTheme.headline5),
+                      Text('Already have an account? ', style: theme.textTheme.headline5),
                       InkWell(
                         onTap: () => Modular.to.navigate(Modular.initialRoute),
                         child: Text(

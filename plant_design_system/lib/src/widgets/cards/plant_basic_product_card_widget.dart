@@ -1,14 +1,23 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:flutter/material.dart';
 import 'package:plant_design_system/plant_design_system.dart';
 
-class PlantBasicProductCardWidget extends StatelessWidget {
+class PlantBasicProductCardWidget extends StatefulWidget {
   final String name;
+  bool isFavorite;
 
-  const PlantBasicProductCardWidget({
+  PlantBasicProductCardWidget({
     Key? key,
     required this.name,
+    required this.isFavorite,
   }) : super(key: key);
 
+  @override
+  State<PlantBasicProductCardWidget> createState() => _PlantBasicProductCardWidgetState();
+}
+
+class _PlantBasicProductCardWidgetState extends State<PlantBasicProductCardWidget> {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
@@ -30,7 +39,7 @@ class PlantBasicProductCardWidget extends StatelessWidget {
           const SizedBox(height: 5),
           Padding(
             padding: const EdgeInsets.only(left: 10),
-            child: Text(name, style: theme.textTheme.headline3),
+            child: Text(widget.name, style: theme.textTheme.headline3),
           )
         ],
       ),

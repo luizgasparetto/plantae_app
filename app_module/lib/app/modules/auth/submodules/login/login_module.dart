@@ -1,5 +1,6 @@
-import 'package:app_module/app/modules/auth/submodules/login/presenter/ui/login_page.dart';
 import 'package:dependency_module/dependency_module.dart';
+
+import 'presenter/ui/login_page.dart';
 
 class LoginModule extends Module {
   @override
