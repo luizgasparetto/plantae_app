@@ -30,7 +30,7 @@ class _ProfilePageState extends State<ProfilePage> {
             ),
             SizedBox(height: size.height * 0.05),
             SizedBox(
-              height: size.height * 0.6,
+              height: size.height * 0.65,
               child: Column(
                 children: [
                   PlantBasicRedirectTile(
@@ -48,19 +48,25 @@ class _ProfilePageState extends State<ProfilePage> {
                   PlantBasicRedirectTile(
                     title: 'Friends',
                     subTitle: 'My friends list',
-                    icon: IconlyLight.user,
+                    icon: IconlyLight.user_1,
+                    onTap: () {},
+                  ),
+                  PlantBasicRedirectTile(
+                    title: 'Terms of Service',
+                    subTitle: 'All our terms of service',
+                    icon: IconlyLight.paper,
+                    onTap: () {},
+                  ),
+                  PlantBasicRedirectTile(
+                    title: 'Contact us',
+                    subTitle: 'Contact us if you have any questions',
+                    icon: IconlyLight.chat,
                     onTap: () {},
                   ),
                   PlantBasicRedirectTile(
                     title: 'Logout',
                     subTitle: 'Disconnect from your account',
                     icon: IconlyLight.logout,
-                    onTap: () {},
-                  ),
-                  PlantBasicRedirectTile(
-                    title: 'Delete account',
-                    subTitle: 'Delete your own account',
-                    icon: IconlyLight.delete,
                     onTap: () {},
                   ),
                 ],

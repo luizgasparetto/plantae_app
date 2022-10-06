@@ -50,13 +50,40 @@ class _HomePageState extends State<HomePage> {
                 },
               ),
             ),
-            SizedBox(height: size.height * 0.03),
+            SizedBox(height: size.height * 0.02),
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text('Discover new plants', style: theme.textTheme.headline1!.copyWith(fontSize: 26)),
+                  Text("What's this plant?", style: theme.textTheme.headline1!.copyWith(fontSize: 26)),
+                  SizedBox(height: size.height * 0.02),
+                  InkWell(
+                    onTap: () {},
+                    child: Container(
+                      width: size.width,
+                      height: size.height * 0.2,
+                      decoration: BoxDecoration(
+                        color: PlantCustomColor.earthyColor,
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 12),
+                        child: Row(
+                          children: [
+                            const Spacer(),
+                            Icon(
+                              IconlyLight.arrow_right_2,
+                              color: PlantCustomColor.darkColor,
+                              size: 36,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: size.height * 0.03),
+                  Text('Recommended plants', style: theme.textTheme.headline1!.copyWith(fontSize: 26)),
                   ListView.builder(
                     physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,

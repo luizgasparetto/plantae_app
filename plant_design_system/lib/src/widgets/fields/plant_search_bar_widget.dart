@@ -10,8 +10,8 @@ class PlantSearchBarWidget extends StatelessWidget {
     final size = MediaQuery.of(context).size;
 
     return SizedBox(
-      width: size.width * 0.75,
-      height: size.height * 0.05,
+      width: size.width,
+      height: size.height * 0.08,
       child: TextFormField(
         maxLines: 1,
         cursorColor: PlantCustomColor.primaryColor,
@@ -22,19 +22,23 @@ class PlantSearchBarWidget extends StatelessWidget {
           filled: true,
           fillColor: Colors.white,
           contentPadding: const EdgeInsets.fromLTRB(5, 3, 5, 1),
-          border: OutlineInputBorder(
+          enabledBorder: OutlineInputBorder(
             borderRadius: BorderRadius.circular(16),
-            borderSide: BorderSide.none,
+            borderSide: BorderSide(color: PlantCustomColor.lightBorderColor, width: 1.5),
+          ),
+          focusedBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(16),
+            borderSide: BorderSide(color: PlantCustomColor.lightBorderColor, width: 1.5),
           ),
           prefixIcon: Icon(
             IconlyLight.search,
-            color: Colors.grey.withOpacity(0.3),
+            color: Colors.grey.withOpacity(0.5),
             size: 20,
           ),
           hintText: 'Search',
           hintStyle: TextStyle(
             fontSize: 16,
-            color: Colors.grey.withOpacity(0.3),
+            color: Colors.grey.withOpacity(0.5),
             height: 1.4,
           ),
         ),

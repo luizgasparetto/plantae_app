@@ -11,7 +11,7 @@ class PlantCustomColor {
   //                                                209, 209, 209
 
   static Color lightTextColor = const Color.fromRGBO(173, 190, 227, 1);
-  static Color lightBorderColor = const Color.fromRGBO(243, 243, 243, 1);
+  static Color lightBorderColor = const Color.fromRGBO(240, 240, 240, 1);
 
   static Color earthyColor = const Color.fromRGBO(242, 238, 233, 1);
 
