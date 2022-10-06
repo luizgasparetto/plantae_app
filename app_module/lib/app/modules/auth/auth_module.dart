@@ -1,6 +1,7 @@
-import 'package:app_module/app/modules/auth/submodules/login/login_module.dart';
-import 'package:app_module/app/modules/auth/submodules/register/register_module.dart';
 import 'package:dependency_module/dependency_module.dart';
+
+import 'submodules/login/login_module.dart';
+import 'submodules/register/register_module.dart';
 
 class AuthModule extends Module {
   @override

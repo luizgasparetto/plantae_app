@@ -45,6 +45,24 @@ class _ProfilePageState extends State<ProfilePage> {
                     icon: IconlyLight.notification,
                     onTap: () {},
                   ),
+                  PlantBasicRedirectTile(
+                    title: 'Friends',
+                    subTitle: 'My friends list',
+                    icon: IconlyLight.user,
+                    onTap: () {},
+                  ),
+                  PlantBasicRedirectTile(
+                    title: 'Logout',
+                    subTitle: 'Disconnect from your account',
+                    icon: IconlyLight.logout,
+                    onTap: () {},
+                  ),
+                  PlantBasicRedirectTile(
+                    title: 'Delete account',
+                    subTitle: 'Delete your own account',
+                    icon: IconlyLight.delete,
+                    onTap: () {},
+                  ),
                 ],
               ),
             )

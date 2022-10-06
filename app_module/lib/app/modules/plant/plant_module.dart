@@ -1,5 +1,6 @@
-import 'package:app_module/app/modules/plant/presenter/ui/plant_details_page.dart';
 import 'package:dependency_module/dependency_module.dart';
+
+import 'presenter/ui/plant_details_page.dart';
 
 class PlantModule extends Module {
   @override

@@ -1,5 +1,6 @@
-import 'package:app_module/app/modules/user/presenter/ui/profile_page.dart';
 import 'package:dependency_module/dependency_module.dart';
+
+import 'presenter/ui/profile_page.dart';
 
 class UserModule extends Module {
   @override

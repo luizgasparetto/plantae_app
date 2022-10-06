@@ -1,5 +1,6 @@
-import 'package:app_module/app/modules/auth/submodules/register/presenter/ui/register_page.dart';
 import 'package:dependency_module/dependency_module.dart';
+
+import 'presenter/ui/register_page.dart';
 
 class RegisterModule extends Module {
   @override

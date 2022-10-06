@@ -1,8 +1,10 @@
-import 'package:app_module/app/modules/auth/auth_module.dart';
-import 'package:app_module/app/modules/dashboard/dashboard_module.dart';
-import 'package:app_module/app/modules/plant/plant_module.dart';
 import 'package:core_module/core.dart';
 import 'package:dependency_module/dependency_module.dart';
+
+import 'modules/auth/auth_module.dart';
+import 'modules/dashboard/dashboard_module.dart';
+import 'modules/plant/plant_module.dart';
+import 'modules/search/search_module.dart';
 
 class AppModule extends Module {
   @override
@@ -13,5 +15,6 @@ class AppModule extends Module {
         ModuleRoute(Modular.initialRoute, module: AuthModule()),
         ModuleRoute('/dashboard', module: DashboardModule()),
         ModuleRoute('/plant', module: PlantModule()),
+        ModuleRoute('/search', module: SearchModule()),
       ];
 }

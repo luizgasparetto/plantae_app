@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
                       SizedBox(width: size.width * 0.05),
                       InkWell(
                         onTap: () => Modular.to.pushNamed(AppRoutes.plantDetails),
-                        child: const PlantBasicProductCardWidget(name: 'Montsera'),
+                        child: PlantBasicProductCardWidget(name: 'Montsera', isFavorite: false),
                       ),
                     ],
                   );

@@ -31,7 +31,7 @@ void main() {
   group('Plant Datasource | ', () {
     group('Create | ', () {
       test('should be able able to create a plant successfully', () async {
-        when(() => authService.currentUserId).thenReturn("id");
+        when(() => authService.currentUserId).thenReturn('id');
         when(() => remoteDatabaseService.set(any(), any(), any())).thenAnswer((_) async {});
 
         await sut.createPlant(kCreatePlantParams);
@@ -40,7 +40,7 @@ void main() {
       });
 
       test('should throw a DatabaseError when remote database fails trying to create a plant', () async {
-        when(() => authService.currentUserId).thenReturn("id");
+        when(() => authService.currentUserId).thenReturn('id');
         when(() => remoteDatabaseService.set(any(), any(), any())).thenThrow(
           DatabaseError(message: 'Error', stackTrace: StackTrace.empty),
         );
@@ -51,7 +51,7 @@ void main() {
 
     group('Get Plants | ', () {
       test('should be able to get a List of PlantEntity successfully', () async {
-        when(() => authService.currentUserId).thenReturn("id");
+        when(() => authService.currentUserId).thenReturn('id');
         when(() => remoteDatabaseService.getDocument(any(), any())).thenAnswer((_) async => [kPlantMap]);
 
         final response = await sut.getPlants();
@@ -60,7 +60,7 @@ void main() {
       });
 
       test('should throw a DatabaseError when fails to get the plants', () async {
-        when(() => authService.currentUserId).thenReturn("id");
+        when(() => authService.currentUserId).thenReturn('id');
         when(() => remoteDatabaseService.getDocument(any(), any())).thenThrow(
           DatabaseError(message: 'Error', stackTrace: StackTrace.empty),
         );

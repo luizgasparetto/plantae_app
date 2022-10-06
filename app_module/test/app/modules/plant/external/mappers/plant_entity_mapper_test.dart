@@ -7,12 +7,12 @@ void main() {
   late final PlantEntityMapper sut;
 
   final plantMapSuccess = {
-    "id": 1,
-    "name": "name",
-    "images": ["image_1"]
+    'id': 1,
+    'name': 'name',
+    'images': ['image_1']
   };
 
-  const plantMapError = {"id": 1, "nome": "name", "images": []};
+  const plantMapError = {'id': 1, 'nome': 'name', 'images': []};
 
   final plantEntity = PlantEntity(id: 1, name: 'name', images: ['image_0']);
 

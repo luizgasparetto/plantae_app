@@ -6,4 +6,6 @@ class AppRoutes {
   static const String dashboard = '/dashboard';
 
   static const String plantDetails = '/plant/details';
+
+  static const String searchUsers = '/search';
 }
