@@ -23,10 +23,7 @@ dev_dependencies:
 
 
 flutter:
-  assets:
-    - assets/images/vaso.png
 
-  
   fonts:
     - family: PlayFair
       fonts:
