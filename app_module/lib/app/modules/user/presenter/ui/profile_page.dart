@@ -42,7 +42,7 @@ class _ProfilePageState extends State<ProfilePage> {
                   PlantBasicRedirectTile(
                     title: 'Notifications',
                     subTitle: 'My notification center',
-                    icon: IconlyBold.setting,
+                    icon: IconlyLight.notification,
                     onTap: () {},
                   ),
                 ],
