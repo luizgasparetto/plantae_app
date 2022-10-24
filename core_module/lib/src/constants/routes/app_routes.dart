@@ -1,7 +1,7 @@
 class AppRoutes {
   // AUTH
-  static const String loginPage = '/login';
-  static const String registerPage = '/register';
+  static const String loginPage = '/auth/login';
+  static const String registerPage = '/auth/register';
 
   static const String dashboard = '/dashboard';
 

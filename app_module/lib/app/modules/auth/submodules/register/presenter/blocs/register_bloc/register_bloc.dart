@@ -1,3 +1,4 @@
+import 'package:core_module/core.dart';
 import 'package:dependency_module/dependency_module.dart';
 import 'package:flutter/foundation.dart';
 
@@ -9,8 +10,9 @@ part 'register_state.dart';
 
 class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
   final IRegisterWithEmailUsecase _registerWithEmailUsecase;
+  final IOverlayService _overlayService;
 
-  RegisterBloc(this._registerWithEmailUsecase) : super(RegisterInitialState()) {
+  RegisterBloc(this._registerWithEmailUsecase, this._overlayService) : super(RegisterInitialState()) {
     on<RegisterWithEmailEvent>((event, emit) async {
       await _registerWithEmailHandler(event, emit);
     });
@@ -22,7 +24,10 @@ class RegisterBloc extends Bloc<RegisterEvent, RegisterState> {
     final response = await _registerWithEmailUsecase.execute(event.params);
 
     response.fold(
-      (l) => emit(RegisterErrorState()),
+      (l) {
+        emit(RegisterErrorState());
+        _overlayService.showErrorSnackBar(l.message);
+      },
       (r) => emit(RegisterSuccessfullState()),
     );
   }

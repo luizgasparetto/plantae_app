@@ -8,13 +8,17 @@ import 'package:mocktail/mocktail.dart';
 
 class LoginWithEmailUsecaseMock extends Mock implements ILoginWithEmailUsecase {}
 
+class OverlayServiceMock extends Mock implements IOverlayService {}
+
 void main() {
   late final ILoginWithEmailUsecase loginWithEmailUsecase;
+  late final IOverlayService overlayService;
 
   const kLoginWithEmailParams = LoginWithEmailParams(email: 'email', password: 'password');
 
   setUpAll(() {
     loginWithEmailUsecase = LoginWithEmailUsecaseMock();
+    overlayService = OverlayServiceMock();
   });
 
   setUp(() {
@@ -27,7 +31,7 @@ void main() {
       build: () {
         when(() => loginWithEmailUsecase.execute(any())).thenAnswer((_) async => right(unit));
 
-        return LoginBloc(loginWithEmailUsecase);
+        return LoginBloc(loginWithEmailUsecase, overlayService);
       },
       act: (bloc) => bloc.add(LoginWithEmailEvent(kLoginWithEmailParams)),
       expect: () => [LoginLoadingState(), LoginLoggedState()],
@@ -40,7 +44,7 @@ void main() {
           (_) async => left(DomainError(message: '', stackTrace: StackTrace.empty)),
         );
 
-        return LoginBloc(loginWithEmailUsecase);
+        return LoginBloc(loginWithEmailUsecase, overlayService);
       },
       act: (bloc) {
         const errorParams = LoginWithEmailParams(email: '', password: '');

@@ -51,4 +51,7 @@ class FirebaseAuthServiceImpl implements IAuthService {
 
   @override
   String get currentUserId => _firebaseAuth.currentUser!.uid;
+
+  @override
+  bool get isUserAuthenticated => _firebaseAuth.currentUser != null;
 }
